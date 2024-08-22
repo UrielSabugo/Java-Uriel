@@ -1,4 +1,4 @@
-package CombateMortal;
+package com.CombateMortal;
 public class Escudo {
 
     private int porcentaje;

@@ -1,4 +1,7 @@
-package CombateMortal;
+package com.CombateMortal;
+
+import com.CombateMortal.Ejercito;
+
 public class Soldado extends Ejercito{
 
     public Soldado(){

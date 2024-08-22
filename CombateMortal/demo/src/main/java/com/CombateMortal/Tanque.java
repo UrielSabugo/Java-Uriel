@@ -1,4 +1,5 @@
-package CombateMortal;
+package com.CombateMortal;
+
 public class Tanque extends Ejercito{
 
     public Tanque(){
