@@ -10,8 +10,6 @@ public class Empleado{
     private int horasTrabajadas;
     private int montoPorHora;
     private int montoPorHijo; 
-    private int cantidadDeHijo;
-    private int cantidadDeHijos;
 
     private List<HijoEmpleado>hijoLista = new ArrayList<HijoEmpleado>();
 

@@ -1,3 +1,4 @@
+package lib;
 public class CajaDeAhorro {
     // Atributos o Variables internas
     private int saldo;

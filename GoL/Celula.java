@@ -8,9 +8,9 @@ class Celula{
     public Celula(boolean b) { //7 PREGUNTAR-{{{{{{{{{{{}}}}}}}}}}}
     }
 
-    public boolean getViva(boolean valor) //7 retorna el estado de la celula
-    {   estaViva=valor;
-        return valor;
+    public boolean getViva() //7 retorna el estado de la celula
+    {   
+        return estaViva;
     }
 
     public void setViva(boolean viva) ///establece el estado de la celula
@@ -43,9 +43,6 @@ class Celula{
             }
         }
             
-      
-
-
 
         public ArrayList<ArrayList<Celula>> getCelda() //retorna el tablero
         {
@@ -58,17 +55,30 @@ class Celula{
                 celda.get(filas).get(columna).setViva(viva);
             }
         }
-
-        public int contarVecinosVivos(int filA, int columna)
-        {
-            return filA;
-
+////////////////////////////////////////////////////////
+        public int contarVecinosVivos(int fila, int columna) {
+            int vivos = 0;
+            int[] direcciones = {-1, 0, 1};
+    
+            for (int i : direcciones) {
+                for (int j : direcciones) {
+                    if (i == 0 && j == 0) {
+                        continue; // Ignorar la célula actual
+                    }
+                    int nuevaFila = fila + i;
+                    int nuevaColumna = columna + j;
+    
+                    if (nuevaFila >= 0 && nuevaFila < celda.size() &&
+                        nuevaColumna >= 0 && nuevaColumna < celda.get(0).size() &&
+                        celda.get(nuevaFila).get(nuevaColumna).getViva()) {
+                        vivos++;
+                    }
+                }
+            }
+    
+            return vivos;
         }
 
-
-
-
-    
         
     }
 
