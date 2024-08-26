@@ -3,7 +3,6 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import CombateMortal.Escudo;
 
 public class TanqueTest {
     @Test
@@ -16,6 +15,7 @@ public class TanqueTest {
         t1.aplicarEscudo(e1);
 
         //recibe +2 disparos y muere
+        assertTrue(t1.estaVivo());
         t1.recibirDisparo();
         t1.recibirDisparo();
         t1.recibirDisparo();

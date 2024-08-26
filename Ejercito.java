@@ -1,11 +1,9 @@
-package com.CombateMortal;
-
-import com.CombateMortal.Escudo;
 
 public class Ejercito {
     
     private int vida;
-    private Escudo escudo;
+    protected int escudo;
+    private boolean vivo;
 
 
     public Ejercito(int estaVivo){
@@ -21,22 +19,19 @@ public class Ejercito {
     }
 
     public void recibirDisparo() {
-        int danio=1;
-        if (escudo != null) {
-            danio *= (1 - escudo.getPorcentaje() / 100.0);
-        }
-        setVida(Math.max(0, getVida() - danio));
+        vida--;
     }
 
     public boolean estaVivo(){
         return vida>0;
     }
 
-    public void aplicarEscudo(Escudo escudo){
+    public static void aplicarEscudo(int escudo){
         this.escudo=escudo;
 
     }
     
     public Ejercito(){
     }
+
 }

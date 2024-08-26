@@ -1,4 +1,4 @@
-package com.CombateMortal;
+
 
 public class Tanque extends Ejercito{
 
